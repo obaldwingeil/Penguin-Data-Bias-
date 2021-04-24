@@ -10,7 +10,7 @@ const Timer = (props) => {
   }
 
   function reset() {
-    setSeconds(30);
+    setSeconds(10);
     setIsActive(false);
   }
 
@@ -28,7 +28,7 @@ const Timer = (props) => {
             setSeconds(seconds => seconds - 1);
           }, 1000);
       }
-    } else if (!isActive && seconds !== 30) {
+    } else if (!isActive && seconds !== 10) {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
